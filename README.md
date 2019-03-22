@@ -1,11 +1,11 @@
-#1º Step
-Open terminal or cmd.__
+# 1º Step
+Open terminal or cmd.<br />
 Install virtualenv.
 
 	$ pip install virtualenv
 
-#2º Step
-Create a virtual environment with python3x.__
+# 2º Step
+Create a virtual environment with python3x.<br />
 Check out python version installed in your system.
 
   in my case
@@ -20,28 +20,28 @@ Then...
 
 	$ virtualenv test --no-site-packages -p python
 
-#3º Step
+# 3º Step
 Enter in test folder.
 
 	$ cd test
 
-#4º Step
+# 4º Step
 Clone git repository into.
 
 	$ git clone 
 
-#5º Step
+# 5º Step
 Activate the environment.
 
 	$ source bin/activate
 
-#6º Step
+# 6º Step
 Install whole needed packages.
 
 	$ pip install -r requirements.txt
 
-#7º Step
-Install and configure a database service (create an user, set a password and then create a database).__
+# 7º Step
+Install and configure a database service (create an user, set a password and then create a database).<br />
 In my case, I'm using MariaDB.
 
 	$ mysql -u root -p
@@ -58,17 +58,17 @@ In my case, I'm using MariaDB.
 	Database changed
 	MariaDB [your_db]>
 
-#8º Step
-Open test/config.py file and change user, password and database.__
+# 8º Step
+Open test/config.py file and change user, password and database.<br />
 NOTE: If you have trouble with the connection, it's because you need to install pymysql and add "+pymysql" as you can see in the code.
 
 	$ pip install pymysql
 
-#9º Step
+# 9º Step
 Open test/app/_ _init_ _.py file and change the IP to your (and the port if you wants).
 
-#10º Step
-Initialize the database, make the migration and upgrade and then initialize the application.__
+# 10º Step
+Initialize the database, make the migration and upgrade and then initialize the application.<br />
 Run:
 
 	$ python run.py db init
