@@ -9,59 +9,60 @@ Create a virtual environment with python3x.
 Check out python version installed in your system.
 
   # in my case
-  $ python -V
-  Python 3.7.2
 
-  $ python2 -V
-  Python 2.7.15
+	$ python -V
+	Python 3.7.2
+
+	$ python2 -V
+	Python 2.7.15
 
 Then...
 
-  $ virtualenv test --no-site-packages -p python
+	$ virtualenv test --no-site-packages -p python
 
 3º Step
 Enter in test folder.
 
-  $ cd test
+	$ cd test
 
 4º Step
 Clone git repository into.
 
-  $ git clone 
+	$ git clone 
 
 5º Step
 Activate the environment.
 
-  $ source bin/activate
+	$ source bin/activate
 
 6º Step
 Install whole needed packages.
 
-  $ pip install -r requirements.txt
+	$ pip install -r requirements.txt
 
 7º Step
 Install and configure a database service (create an user, set a password and then create a database).
 In my case, I'm using MariaDB.
 
-  $ mysql -u root -p
+	$ mysql -u root -p
   
-  MariaDB [(none)]> create user if not exists 'user'@localhost identified by 'password';
-  MariaDB [(none)]> create database your_db;
-  MariaDB [(none)]> grant all privileges on your_db.* to user@localhost identified by 'password';
-  MariaDB [(none)]> flush privileges;
-  MariaDB [(none)]> exit;
+	MariaDB [(none)]> create user if not exists 'user'@localhost identified by 'password';
+	MariaDB [(none)]> create database your_db;
+	MariaDB [(none)]> grant all privileges on your_db.* to user@localhost identified by 'password';
+	MariaDB [(none)]> flush privileges;
+	MariaDB [(none)]> exit;
   
-  $ mysql -u user -p
+	$ mysql -u user -p
 
-  MariaDB [(none)]> use your_db;
-  Database changed
-  MariaDB [your_db]>
+	MariaDB [(none)]> use your_db;
+	Database changed
+	MariaDB [your_db]>
 
 8º Step
 Open test/config.py file and change user, password and database.
 NOTE: If you have trouble with the connection, it's because you need to install pymysql and add "+pymysql" as you can see in the code.
 
-  $ pip install pymysql
+	$ pip install pymysql
 
 9º Step
 Open test/app/__init__.py file and change the IP to your (and the port if you wants).
@@ -70,10 +71,10 @@ Open test/app/__init__.py file and change the IP to your (and the port if you wa
 Initialize the database, make the migration and upgrade and then initialize the application.
 Run:
 
-  $ python run.py db init
-  $ python run.py db migrate
-  $ python run.py db upgrade
-  $ python run.py runserver
+	$ python run.py db init
+	$ python run.py db migrate
+	$ python run.py db upgrade
+	$ python run.py runserver
 
 You'll see the application running.
 Just copy the url and paste on browser.
