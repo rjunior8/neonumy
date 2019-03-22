@@ -2,7 +2,7 @@
 Open terminal or cmd.
 Install virtualenv.
 
-  $ pip install virtualenv
+	$ pip install virtualenv
 
 2º Step
 Create a virtual environment with python3x.
