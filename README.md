@@ -1,14 +1,14 @@
-1º Step
-Open terminal or cmd.
+#1º Step
+Open terminal or cmd.__
 Install virtualenv.
 
 	$ pip install virtualenv
 
-2º Step
-Create a virtual environment with python3x.
+#2º Step
+Create a virtual environment with python3x.__
 Check out python version installed in your system.
 
-  # in my case
+  in my case
 
 	$ python -V
 	Python 3.7.2
@@ -20,28 +20,28 @@ Then...
 
 	$ virtualenv test --no-site-packages -p python
 
-3º Step
+#3º Step
 Enter in test folder.
 
 	$ cd test
 
-4º Step
+#4º Step
 Clone git repository into.
 
 	$ git clone 
 
-5º Step
+#5º Step
 Activate the environment.
 
 	$ source bin/activate
 
-6º Step
+#6º Step
 Install whole needed packages.
 
 	$ pip install -r requirements.txt
 
-7º Step
-Install and configure a database service (create an user, set a password and then create a database).
+#7º Step
+Install and configure a database service (create an user, set a password and then create a database).__
 In my case, I'm using MariaDB.
 
 	$ mysql -u root -p
@@ -58,17 +58,17 @@ In my case, I'm using MariaDB.
 	Database changed
 	MariaDB [your_db]>
 
-8º Step
-Open test/config.py file and change user, password and database.
+#8º Step
+Open test/config.py file and change user, password and database.__
 NOTE: If you have trouble with the connection, it's because you need to install pymysql and add "+pymysql" as you can see in the code.
 
 	$ pip install pymysql
 
-9º Step
-Open test/app/__init__.py file and change the IP to your (and the port if you wants).
+#9º Step
+Open test/app/_ _init_ _.py file and change the IP to your (and the port if you wants).
 
-10º Step
-Initialize the database, make the migration and upgrade and then initialize the application.
+#10º Step
+Initialize the database, make the migration and upgrade and then initialize the application.__
 Run:
 
 	$ python run.py db init
@@ -79,4 +79,4 @@ Run:
 You'll see the application running.
 Just copy the url and paste on browser.
 
-NOTE: In some systems, the python3x is called by command "python3". In this case you'll make "virtualenv test --no-site-packages -p python3". So after activate the environment, you don't need to make "python3 run.py", just make "python run.py" that it'll work.
+NOTE: In some systems, the python3x is called by command "python3". In this case you'll make "virtualenv test --no-site-packages -p python3". So after activate the environment, you don't need to make "python3 run.py", just make "python run.py" that it'll work. And for "pip install package", you don't need of "sudo".
