@@ -76,7 +76,18 @@ Run:
 	$ python run.py db upgrade
 	$ python run.py runserver
 
-You'll see the application running.
+You'll see the application running like this:
+
+	* Serving Flask app "app" (lazy loading)
+	* Environment: production
+	  WARNING: Do not use the development server in a production environment.
+	  Use a production WSGI server instead.
+	* Debug mode: on
+	* Running on http://0.0.0.0:8888/ (Press CTRL+C to quit)
+	* Restarting with stat
+	* Debugger is active!
+	* Debugger PIN: 341-735-054
+
 Just copy the url and paste on browser.
 
 NOTE: In some systems, the python3x is called by command "python3". In this case you'll make "virtualenv test --no-site-packages -p python3". So after activate the environment, you don't need to make "python3 run.py", just make "python run.py" that it'll work. And for "pip install package", you don't need of "sudo".
